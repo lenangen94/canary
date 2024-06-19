@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Demon Outcast")
 local monster = {}
 
 monster.description = "a demon outcast"
-monster.experience = 6200
+monster.experience = 7130
 monster.outfit = {
 	lookType = 590,
 	lookHead = 0,
@@ -73,7 +73,7 @@ monster.light = {
 monster.summon = {
 	maxSummons = 2,
 	summons = {
-		{ name = "energy elemental", chance = 10, interval = 2000, count = 2 },
+		{ name = "energy elemental", chance = 5, interval = 10000, count = 1 },
 	},
 }
 
@@ -118,7 +118,6 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ENERGYDAMAGE, minDamage = -250, maxDamage = -450, length = 6, spread = 0, effect = CONST_ME_PURPLEENERGY, target = true },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_ENERGYDAMAGE, minDamage = -350, maxDamage = -550, length = 8, spread = 0, effect = CONST_ME_YELLOWENERGY, target = true },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_ENERGYDAMAGE, minDamage = -100, maxDamage = -250, radius = 3, effect = CONST_ME_ENERGYHIT, target = true },
-	{ name = "demon outcast skill reducer", interval = 2000, chance = 10, range = 5, target = false },
 	{ name = "combat", interval = 2000, chance = 10, type = COMBAT_MANADRAIN, minDamage = -80, maxDamage = -150, radius = 4, effect = CONST_ME_MAGIC_GREEN, target = false },
 }
 

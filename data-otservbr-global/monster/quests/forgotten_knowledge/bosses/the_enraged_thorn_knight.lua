@@ -109,7 +109,12 @@ monster.loot = {
 	{ id = 20203, chance = 1000 }, -- trapped bad dream monster
 	{ id = 24954, chance = 500, unique = true }, -- part of a rune
 	{ id = 22721, chance = 100000 }, -- gold token
-	{ id = 22516, chance = 100000 }, -- silver token
+	{ name = "silver token", chance = 25640, maxCount = 4 },
+	{ id = 27651, chance = 2002 }, -- gnome 
+	{ id = 27650, chance = 2001 }, -- gnome 
+	{ id = 27649, chance = 2050 }, -- gnome 
+	{ id = 27648, chance = 2200 }, -- gnome 
+	{ id = 27647, chance = 2100 }, -- gnome 
 }
 
 monster.attacks = {

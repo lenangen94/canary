@@ -209,9 +209,10 @@ GameStore.DefaultDescriptions = {
 GameStore.ItemLimit = {
 	PREY_WILDCARD = 50,
 	INSTANT_REWARD_ACCESS = 90,
-	EXPBOOST = 6,
+	EXPBOOST = 10,
 	HIRELING = 10,
 }
+
 
 --==Parsing==--
 GameStore.isItsPacket = function(byte)
@@ -247,11 +248,6 @@ function onRecvbyte(player, msg, byte)
 		return player:sendCancelMessage("Store don't have offers for rookgaard citizen.")
 	end
 
-	if player:isUIExhausted(250) then
-		player:sendCancelMessage("You are exhausted.")
-		return
-	end
-
 	if byte == GameStore.RecivedPackets.C_StoreEvent then
 	elseif byte == GameStore.RecivedPackets.C_TransferCoins then
 		parseTransferableCoins(player:getId(), msg)
@@ -267,6 +263,12 @@ function onRecvbyte(player, msg, byte)
 		parseRequestTransactionHistory(player:getId(), msg)
 	end
 
+	if player:isUIExhausted(250) then
+		player:sendCancelMessage("You are exhausted.")
+		return false
+	end
+
+	player:updateUIExhausted()
 	return true
 end
 
@@ -305,7 +307,6 @@ function parseTransferableCoins(playerId, msg)
 	GameStore.insertHistory(accountId, GameStore.HistoryTypes.HISTORY_TYPE_NONE, player:getName() .. " transferred you this amount.", amount, GameStore.CoinType.Transferable)
 	GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, "You transferred this amount to " .. reciver, -1 * amount, GameStore.CoinType.Transferable)
 	openStore(playerId)
-	player:updateUIExhausted()
 end
 
 function parseOpenStore(playerId, msg)
@@ -396,7 +397,6 @@ function parseRequestStoreOffers(playerId, msg)
 
 		addPlayerEvent(sendShowStoreOffers, 250, playerId, searchResultsCategory)
 	end
-	player:updateUIExhausted()
 end
 
 function parseBuyStoreOffer(playerId, msg)
@@ -480,7 +480,7 @@ function parseBuyStoreOffer(playerId, msg)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_SEXCHANGE then
 			GameStore.processSexChangePurchase(player)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_EXPBOOST then
-			GameStore.processExpBoostPurchase(player)
+			GameStore.processExpBoostPuchase(player)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_HUNTINGSLOT then
 			GameStore.processTaskHuntingThirdSlot(player)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_PREYSLOT then
@@ -515,8 +515,8 @@ function parseBuyStoreOffer(playerId, msg)
 	if not pcallOk then
 		local alertMessage = pcallError.code and pcallError.message or "Something went wrong. Your purchase has been cancelled."
 
-		-- unhandled error
-		if not pcallError.code then
+		if not pcallError.code then -- unhandled error
+			-- log some debugging info
 			logger.warn("[parseBuyStoreOffer] - Purchase failed due to an unhandled script error. Stacktrace: {}", pcallError)
 		end
 
@@ -533,8 +533,6 @@ function parseBuyStoreOffer(playerId, msg)
 		sendUpdatedStoreBalances(playerId)
 		return addPlayerEvent(sendStorePurchaseSuccessful, 650, playerId, message)
 	end
-
-	player:updateUIExhausted()
 	return true
 end
 
@@ -543,13 +541,11 @@ function parseOpenTransactionHistory(playerId, msg)
 	local page = 1
 	GameStore.DefaultValues.DEFAULT_VALUE_ENTRIES_PER_PAGE = msg:getByte()
 	sendStoreTransactionHistory(playerId, page, GameStore.DefaultValues.DEFAULT_VALUE_ENTRIES_PER_PAGE)
-	player:updateUIExhausted()
 end
 
 function parseRequestTransactionHistory(playerId, msg)
 	local page = msg:getU32()
 	sendStoreTransactionHistory(playerId, page + 1, GameStore.DefaultValues.DEFAULT_VALUE_ENTRIES_PER_PAGE)
-	player:updateUIExhausted()
 end
 
 local function getCategoriesRook()
@@ -630,6 +626,7 @@ function sendOfferDescription(player, offerId, description)
 end
 
 function Player.canBuyOffer(self, offer)
+	local playerId = self:getId()
 	local disabled, disabledReason = 0, ""
 	if offer.disabled or not offer.type then
 		disabled = 1
@@ -737,7 +734,7 @@ function Player.canBuyOffer(self, offer)
 				disabled = 1
 				disabledReason = "You can't buy XP Boost for today."
 			end
-			if self:getXpBoostTime() > 0 then
+			if self:getExpBoostStamina() > 0 then
 				disabled = 1
 				disabledReason = "You already have an active XP boost."
 			end
@@ -1653,6 +1650,7 @@ function GameStore.processHouseRelatedPurchase(player, offer)
 						decoKit:setAttribute(ITEM_ATTRIBUTE_STORE, systemTime())
 					end
 				end
+				player:sendUpdateContainer(inbox)
 			else
 				for i = 1, offer.count do
 					local decoKit = inbox:addItem(ITEM_DECORATION_KIT, 1)
@@ -1664,10 +1662,10 @@ function GameStore.processHouseRelatedPurchase(player, offer)
 							decoKit:setAttribute(ITEM_ATTRIBUTE_STORE, systemTime())
 						end
 					end
+					player:sendUpdateContainer(inbox)
 				end
 			end
 		end
-		player:sendUpdateContainer(inbox)
 	end
 end
 
@@ -1688,7 +1686,11 @@ function GameStore.processOutfitPurchase(player, offerSexIdTable, addon)
 	elseif player:hasOutfit(looktype, _addon) then
 		return error({ code = 0, message = "You already own this outfit." })
 	else
-		if not player:addOutfitAddon(looktype, _addon) or not player:hasOutfit(looktype, _addon) then
+		if
+			not (player:addOutfitAddon(looktype, _addon)) -- TFS call failed
+			or (not player:hasOutfit(looktype, _addon)) -- Additional check; if the looktype doesn't match player sex for example,
+			--   then the TFS check will still pass... bug? (TODO)
+		then
 			error({ code = 0, message = "There has been an issue with your outfit purchase. Your purchase has been cancelled." })
 		else
 			player:addOutfitAddon(offerSexIdTable.male, _addon)
@@ -1747,12 +1749,12 @@ function GameStore.processSexChangePurchase(player)
 	player:toggleSex()
 end
 
-function GameStore.processExpBoostPurchase(player)
-	local currentXpBoostTime = player:getXpBoostTime()
+function GameStore.processExpBoostPuchase(player)
+	local currentExpBoostTime = player:getExpBoostStamina()
 	local expBoostCount = player:getStorageValue(GameStore.Storages.expBoostCount)
 
-	player:setXpBoostPercent(50)
-	player:setXpBoostTime(currentXpBoostTime + 3600)
+	player:setStoreXpBoost(50)
+	player:setExpBoostStamina(currentExpBoostTime + 3600)
 
 	if expBoostCount == -1 or expBoostCount == 6 then
 		expBoostCount = 1
@@ -2227,8 +2229,7 @@ function sendHomePage(playerId)
 	msg:sendToPlayer(player)
 end
 
---exporting the method so other scripts can use to open store
-function Player:openStore(serviceName)
+function Player:openStore(serviceName) --exporting the method so other scripts can use to open store
 	local playerId = self:getId()
 	openStore(playerId)
 

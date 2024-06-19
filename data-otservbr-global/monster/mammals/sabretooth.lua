@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Sabretooth")
 local monster = {}
 
 monster.description = "a sabretooth"
-monster.experience = 11931
+monster.experience = 13840
 monster.outfit = {
 	lookType = 1549,
 	lookHead = 85,
@@ -26,8 +26,8 @@ monster.Bestiary = {
 	Locations = "Sparkling Pools",
 }
 
-monster.health = 17300
-monster.maxHealth = 17300
+monster.health = 15490
+monster.maxHealth = 15490
 monster.race = "blood"
 monster.corpse = 39287
 monster.speed = 225
@@ -87,9 +87,9 @@ monster.loot = {
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1100 },
-	{ name = "sabretooth wave", interval = 5000, chance = 35, minDamage = -600, maxDamage = -1000 },
-	{ name = "combat", interval = 3500, chance = 30, type = COMBAT_PHYSICALDAMAGE, minDamage = -800, maxDamage = -1500, range = 1, effect = CONST_ME_BIG_SCRATCH, target = true },
-	{ name = "combat", interval = 2700, chance = 35, type = COMBAT_FIREDAMAGE, minDamage = -900, maxDamage = -1350, range = 1, target = true },
+	{ name = "sabretooth wave", interval = 2000, chance = 35, minDamage = -600, maxDamage = -1000 },
+	{ name = "combat", interval = 2200, chance = 30, type = COMBAT_PHYSICALDAMAGE, minDamage = -800, maxDamage = -1500, range = 1, effect = CONST_ME_BIG_SCRATCH, target = true },
+	{ name = "combat", interval = 2300, chance = 35, type = COMBAT_FIREDAMAGE, minDamage = -900, maxDamage = -1350, range = 1, target = true },
 }
 
 monster.defenses = {

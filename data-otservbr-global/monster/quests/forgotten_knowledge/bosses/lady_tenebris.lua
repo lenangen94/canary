@@ -102,7 +102,6 @@ monster.loot = {
 	{ id = 3037, chance = 1000 }, -- yellow gem
 	{ id = 16096, chance = 1000 }, -- wand of defiance
 	{ id = 22721, chance = 100000 }, -- gold token
-	{ id = 22516, chance = 100000 }, -- silver token
 	{ id = 3341, chance = 200 }, -- arcane staff
 	{ id = 24973, chance = 200 }, -- shadow mask
 	{ id = 24974, chance = 200 }, -- shadow paint
@@ -111,6 +110,12 @@ monster.loot = {
 	{ id = 24957, chance = 500, unique = true }, -- part of a rune
 	{ id = 3021, chance = 200 }, -- sapphire amulet
 	{ id = 20089, chance = 200 }, -- umbral spellbook
+	{ name = "silver token", chance = 25640, maxCount = 5 },
+	{ id = 27651, chance = 2002 }, -- gnome 
+	{ id = 27650, chance = 2001 }, -- gnome 
+	{ id = 27649, chance = 2050 }, -- gnome 
+	{ id = 27648, chance = 2200 }, -- gnome 
+	{ id = 27647, chance = 2100 }, -- gnome 
 }
 
 monster.attacks = {

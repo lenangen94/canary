@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Many Faces")
 local monster = {}
 
 monster.description = "a many faces"
-monster.experience = 18870
+monster.experience = 28600
 monster.outfit = {
 	lookType = 1296,
 	lookHead = 0,
@@ -95,7 +95,7 @@ monster.loot = {
 	{ name = "glacier robe", chance = 2130 },
 	{ name = "gruesome fan", chance = 610 },
 	{ name = "glacial rod", chance = 610 },
-	{ id = 34109, chance = 20 }, -- bag you desire
+	{ id = 34109, chance = 30 }, -- bag you desire
 }
 
 monster.attacks = {
@@ -103,8 +103,6 @@ monster.attacks = {
 	{ name = "combat", interval = 4000, chance = 33, type = COMBAT_ICEDAMAGE, minDamage = -1220, maxDamage = -1400, range = 7, shootEffect = CONST_ANI_SNOWBALL, effect = CONST_ME_ICEATTACK, target = true },
 	{ name = "combat", interval = 5000, chance = 44, type = COMBAT_ICEDAMAGE, minDamage = -1000, maxDamage = -1450, range = 7, radius = 5, shootEffect = CONST_ANI_ICE, effect = CONST_ME_ICEAREA, target = true },
 	{ name = "combat", interval = 9500, chance = 59, type = COMBAT_HOLYDAMAGE, minDamage = -1050, maxDamage = -1300, radius = 4, effect = CONST_ME_HOLYAREA, target = false },
-	{ name = "extended holy chain", interval = 10000, chance = 59, minDamage = -1150, maxDamage = -1300, range = 7 },
-	{ name = "destroy magic walls", interval = 1000, chance = 30 },
 }
 
 monster.defenses = {

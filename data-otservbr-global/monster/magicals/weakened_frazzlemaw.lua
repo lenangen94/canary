@@ -102,6 +102,7 @@ monster.loot = {
 	{ id = 20198, chance = 12000 }, -- frazzle tongue
 	{ id = 20199, chance = 10500 }, -- frazzle skin
 	{ name = "fairy wings", chance = 15000 },
+	{ id = 22721, chance = 620, maxCount = 2},
 }
 
 monster.attacks = {

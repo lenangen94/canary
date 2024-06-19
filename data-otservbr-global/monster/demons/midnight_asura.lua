@@ -109,6 +109,7 @@ monster.loot = {
 	{ id = 3403, chance = 2030 }, -- tribal mask
 	{ id = 8082, chance = 760 }, -- underworld rod
 	{ id = 3037, chance = 870 }, -- yellow gem
+	{ id = 22721, chance = 620, maxCount = 2}, -- gold token
 }
 
 monster.attacks = {
@@ -118,7 +119,7 @@ monster.attacks = {
 	{ name = "combat", interval = 4100, chance = 27, type = COMBAT_DEATHDAMAGE, minDamage = -150, maxDamage = -300, length = 8, spread = 0, effect = CONST_ME_MORTAREA, target = false },
 	{ name = "combat", interval = 2700, chance = 15, type = COMBAT_DEATHDAMAGE, minDamage = -50, maxDamage = -200, range = 5, shootEffect = CONST_ANI_SUDDENDEATH, target = true },
 	{ name = "combat", interval = 3100, chance = 15, type = COMBAT_ENERGYDAMAGE, minDamage = -50, maxDamage = -100, range = 1, shootEffect = CONST_ANI_ENERGY, target = true },
-	{ name = "speed", interval = 2000, chance = 20, speedChange = -800, radius = 1, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_SLEEP, target = true, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 20, speedChange = -0, radius = 1, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_SLEEP, target = true, duration = 15000 },
 }
 
 monster.defenses = {

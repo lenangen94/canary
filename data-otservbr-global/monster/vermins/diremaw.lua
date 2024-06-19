@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Diremaw")
 local monster = {}
 
 monster.description = "a diremaw"
-monster.experience = 2770
+monster.experience = 2500
 monster.outfit = {
 	lookType = 1034,
 	lookHead = 0,
@@ -30,8 +30,8 @@ monster.Bestiary = {
 	Locations = "Gnome Deep Hub north and south tasking areas, Warzone 6",
 }
 
-monster.health = 3600
-monster.maxHealth = 3600
+monster.health = 3400
+monster.maxHealth = 3400
 monster.race = "blood"
 monster.corpse = 27494
 monster.speed = 150
@@ -90,10 +90,10 @@ monster.loot = {
 	{ name = "diremaw legs", chance = 9650, maxCount = 2 },
 	{ name = "small enchanted emerald", chance = 2940, maxCount = 2 },
 	{ name = "small emerald", chance = 5080, maxCount = 2 },
-	{ name = "gold ingot", chance = 2970 },
+	{ name = "gold ingot", chance = 4600 },
 	{ id = 281, chance = 3100 }, -- giant shimmering pearl (green)
 	{ name = "suspicious device", chance = 600 },
-	{ name = "mycological bow", chance = 200 },
+	{ name = "mycological bow", chance =  200 },
 	{ name = "mushroom backpack", chance = 1500 },
 }
 
@@ -106,7 +106,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 5,
-	armor = 71,
+	armor = 60,
 	mitigation = 1.94,
 }
 

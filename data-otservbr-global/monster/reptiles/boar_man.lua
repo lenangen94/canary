@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Boar Man")
 local monster = {}
 
 monster.description = "a boar man"
-monster.experience = 7720
+monster.experience = 8878
 monster.outfit = {
 	lookType = 1603,
 	lookHead = 0,
@@ -76,7 +76,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 78950, maxCount = 22 },
+	{ name = "platinum coin", chance = 78950, maxCount = 44 },
 	{ name = "red crystal fragment", chance = 9830, maxCount = 6 },
 	{ id = 3039, chance = 6390, maxCount = 2 }, -- red gem
 	{ name = "boar man hoof", chance = 4640, maxCount = 2 },
@@ -89,11 +89,11 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -498 },
-	{ name = "combat", interval = 2300, chance = 30, type = COMBAT_PHYSICALDAMAGE, minDamage = -375, maxDamage = -392, range = 7, shootEffect = CONST_ANI_THROWINGKNIFE, target = true },
-	{ name = "combat", interval = 2600, chance = 40, type = COMBAT_DEATHDAMAGE, minDamage = -386, maxDamage = -480, range = 7, shootEffect = CONST_ANI_SUDDENDEATH, target = true },
-	{ name = "combat", interval = 2900, chance = 30, type = COMBAT_PHYSICALDAMAGE, minDamage = -60, maxDamage = -140, range = 1, radius = 4, effect = CONST_ME_EXPLOSIONAREA, target = false },
-	{ name = "combat", interval = 3200, chance = 35, type = COMBAT_ENERGYDAMAGE, minDamage = -311, maxDamage = -400, length = 8, spread = 3, effect = CONST_ME_ENERGYHIT, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -398 },
+	{ name = "combat", interval = 3000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -300, maxDamage = -313, range = 7, shootEffect = CONST_ANI_THROWINGKNIFE, target = true },
+	{ name = "combat", interval = 3000, chance = 25, type = COMBAT_DEATHDAMAGE, minDamage = -308, maxDamage = -384, range = 3, shootEffect = CONST_ANI_SUDDENDEATH, target = true },
+	{ name = "combat", interval = 3000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -60, maxDamage = -140, range = 1, radius = 4, effect = CONST_ME_EXPLOSIONAREA, target = false },
+	{ name = "combat", interval = 3000, chance = 20, type = COMBAT_ENERGYDAMAGE, minDamage = -217, maxDamage = -280, length = 8, spread = 3, effect = CONST_ME_ENERGYHIT, target = false },
 }
 
 monster.defenses = {

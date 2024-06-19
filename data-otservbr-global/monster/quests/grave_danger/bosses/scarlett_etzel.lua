@@ -98,7 +98,7 @@ monster.loot = {
 	{ name = "terra hood", chance = 7400 },
 	{ name = "terra mantle", chance = 7250 },
 	{ name = "magma amulet", chance = 5500 },
-	{ name = "silver token", chance = 6000, maxCount = 4 },
+	{ name = "silver token", chance = 6000, maxCount = 6 },
 	{ name = "gold ingot", chance = 5000 },
 	{ name = "terra amulet", chance = 4800 },
 	{ name = "giant sapphire", chance = 4800 },

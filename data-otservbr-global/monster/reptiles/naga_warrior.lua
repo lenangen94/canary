@@ -74,7 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 100000, maxCount = 20 },
+	{ name = "platinum coin", chance = 100000, maxCount = 25 },
 	{ name = "dagger", chance = 38810 },
 	{ name = "strong health potion", chance = 14930, maxCount = 2 },
 	{ name = "naga warrior scales", chance = 10600, maxCount = 3 },
@@ -86,16 +86,16 @@ monster.loot = {
 	{ name = "serpent sword", chance = 1940 },
 	{ name = "violet crystal shard", chance = 2640 },
 	{ name = "katana", chance = 1490 },
-	{ name = "relic sword", chance = 600 },
-	{ name = "knight armor", chance = 1100 },
+	{ name = "relic sword", chance = 1800 },
+	{ name = "knight armor", chance = 2100 },
 	{ id = 7441, chance = 300 }, -- ice cube
 }
 
 monster.attacks = {
-	{ name = "combat", interval = 2000, chance = 100, type = COMBAT_PHYSICALDAMAGE, minDamage = -120, maxDamage = -340, target = true }, -- basic_attack
-	{ name = "combat", interval = 2500, chance = 30, type = COMBAT_PHYSICALDAMAGE, minDamage = -320, maxDamage = -430, effect = CONST_ME_YELLOWSMOKE, range = 3, target = true }, -- eruption_strike
-	{ name = "nagadeathattack", interval = 3000, chance = 35, minDamage = -360, maxDamage = -415, target = true }, -- death_strike
-	{ name = "combat", interval = 3500, chance = 35, type = COMBAT_LIFEDRAIN, minDamage = -360, maxDamage = -386, radius = 4, effect = CONST_ME_DRAWBLOOD, target = false }, -- great_blood_ball
+	{ name = "combat", interval = 2000, chance = 100, type = COMBAT_PHYSICALDAMAGE, minDamage = -0, maxDamage = -330, target = true }, -- basic_attack
+	{ name = "combat", interval = 2500, chance = 30, type = COMBAT_PHYSICALDAMAGE, minDamage = -260, maxDamage = -330, effect = CONST_ME_YELLOWSMOKE, range = 3, target = true }, -- eruption_strike
+	{ name = "nagadeathattack", interval = 3000, chance = 35, minDamage = -250, maxDamage = -330, target = true }, -- death_strike
+	{ name = "combat", interval = 3500, chance = 35, type = COMBAT_LIFEDRAIN, minDamage = -330, maxDamage = -330, radius = 4, effect = CONST_ME_DRAWBLOOD, target = false }, -- great_blood_ball
 }
 
 monster.defenses = {

@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Mean Lost Soul")
 local monster = {}
 
 monster.description = "a mean lost soul"
-monster.experience = 5580
+monster.experience = 7130
 monster.outfit = {
 	lookType = 1268,
 	lookHead = 0,
@@ -73,7 +73,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 56040 },
+	{ name = "platinum coin", chance = 56040, maxCount = 10 },
 	{ name = "lost soul", chance = 36220 },
 	{ name = "death toll", chance = 4890 },
 	{ name = "skull staff", chance = 4540 },
@@ -81,7 +81,7 @@ monster.loot = {
 	{ name = "ensouled essence", chance = 2760 },
 	{ name = "fire axe", chance = 1400 },
 	{ name = "ivory comb", chance = 1200 },
-	{ name = "mercenary sword", chance = 1050 },
+	{ name = "mercenary sword", chance = 1250 },
 	{ name = "haunted blade", chance = 960 },
 	{ name = "warrior's axe", chance = 730 },
 	{ name = "twiceslicer", chance = 310 },
@@ -89,9 +89,9 @@ monster.loot = {
 
 monster.attacks = {
 	{ name = "melee", interval = 2000, chance = 100, minDamage = -100, maxDamage = -500 },
-	{ name = "combat", interval = 1700, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -300, maxDamage = -550, radius = 3, shootEffect = CONST_ANI_ENVENOMEDARROW, effect = CONST_ME_HITBYPOISON, target = true },
-	{ name = "combat", interval = 1700, chance = 25, type = COMBAT_ENERGYDAMAGE, minDamage = -300, maxDamage = -550, length = 4, spread = 0, effect = CONST_ME_ENERGYHIT, target = false },
-	{ name = "combat", interval = 1700, chance = 35, type = COMBAT_DEATHDAMAGE, minDamage = -300, maxDamage = -550, radius = 3, effect = CONST_ME_MORTAREA, target = false },
+	{ name = "combat", interval = 1700, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -200, maxDamage = -350, radius = 3, shootEffect = CONST_ANI_ENVENOMEDARROW, effect = CONST_ME_HITBYPOISON, target = true },
+	{ name = "combat", interval = 1700, chance = 25, type = COMBAT_ENERGYDAMAGE, minDamage = -300, maxDamage = -420, length = 4, spread = 0, effect = CONST_ME_ENERGYHIT, target = false },
+	{ name = "combat", interval = 1700, chance = 35, type = COMBAT_DEATHDAMAGE, minDamage = -360, maxDamage = -500, radius = 3, effect = CONST_ME_MORTAREA, target = false },
 }
 
 monster.defenses = {

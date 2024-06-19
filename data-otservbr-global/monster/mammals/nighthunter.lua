@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Nighthunter")
 local monster = {}
 
 monster.description = "a nighthunter"
-monster.experience = 12647
+monster.experience = 14670
 monster.outfit = {
 	lookType = 1552,
 	lookHead = 85,
@@ -26,8 +26,8 @@ monster.Bestiary = {
 	Locations = "Monster Graveyard",
 }
 
-monster.health = 19200
-monster.maxHealth = 19200
+monster.health = 17290
+monster.maxHealth = 17290
 monster.race = "blood"
 monster.corpse = 39299
 monster.speed = 205
@@ -88,9 +88,9 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -700 },
-	{ name = "combat", interval = 3500, chance = 35, type = COMBAT_EARTHDAMAGE, minDamage = -950, maxDamage = -1300, range = 1, radius = 1, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = true },
-	{ name = "nighthunter wave", interval = 5000, chance = 25, minDamage = -600, maxDamage = -775 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -490 },
+	{ name = "combat", interval = 3500, chance = 35, type = COMBAT_EARTHDAMAGE, minDamage = -665, maxDamage = -910, range = 1, radius = 1, shootEffect = CONST_ANI_POISON, effect = CONST_ME_POISONAREA, target = true },
+	{ name = "nighthunter wave", interval = 5000, chance = 25, minDamage = -420, maxDamage = -542 },
 }
 
 monster.defenses = {

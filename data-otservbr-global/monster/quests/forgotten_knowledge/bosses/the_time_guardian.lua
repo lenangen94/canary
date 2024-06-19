@@ -108,7 +108,12 @@ monster.loot = {
 	{ id = 3439, chance = 100 }, -- phoenix shield
 	{ id = 7417, chance = 100 }, -- runed sword
 	{ id = 22721, chance = 100000 }, -- gold token
-	{ id = 22516, chance = 100000 }, -- silver token
+	{ name = "silver token", chance = 25640, maxCount = 5 },
+	{ id = 27651, chance = 1000 }, -- gnome 
+	{ id = 27650, chance = 1000 }, -- gnome 
+	{ id = 27649, chance = 1000 }, -- gnome 
+	{ id = 27658, chance = 1000 }, -- gnome 
+	{ id = 27647, chance = 1000 }, -- gnome 
 }
 
 monster.attacks = {

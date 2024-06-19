@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Deepworm")
 local monster = {}
 
 monster.description = "a deepworm"
-monster.experience = 2520
+monster.experience = 2300
 monster.outfit = {
 	lookType = 1033,
 	lookHead = 0,
@@ -30,8 +30,8 @@ monster.Bestiary = {
 	Locations = "Gnome Deep Hub",
 }
 
-monster.health = 3500
-monster.maxHealth = 3500
+monster.health = 3000
+monster.maxHealth = 3000
 monster.race = "blood"
 monster.corpse = 27545
 monster.speed = 102
@@ -106,7 +106,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 5,
-	armor = 73,
+	armor = 60,
 	mitigation = 1.88,
 }
 

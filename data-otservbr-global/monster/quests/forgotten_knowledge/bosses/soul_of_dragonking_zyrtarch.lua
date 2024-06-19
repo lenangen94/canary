@@ -107,6 +107,11 @@ monster.loot = {
 	{ id = 11692, chance = 300, unique = true }, -- snake god's sceptre
 	{ id = 3035, chance = 90000, maxCount = 6 }, -- platinum coin
 	{ id = 3030, chance = 3000, maxCount = 5 }, -- small ruby
+	{ id = 27651, chance = 2002 }, -- gnome 
+	{ id = 27650, chance = 2001 }, -- gnome 
+	{ id = 27649, chance = 2050 }, -- gnome 
+	{ id = 27648, chance = 2200 }, -- gnome 
+	{ id = 27647, chance = 2100 }, -- gnome 
 }
 
 monster.attacks = {

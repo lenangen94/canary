@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Sphinx")
 local monster = {}
 
 monster.description = "a sphinx"
-monster.experience = 7500
+monster.experience = 11250
 monster.outfit = {
 	lookType = 1188,
 	lookHead = 0,
@@ -76,17 +76,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 100000, maxCount = 3 },
+	{ name = "platinum coin", chance = 68790, maxCount = 32 },
 	{ name = "sphinx feather", chance = 9300 },
 	{ name = "magma amulet", chance = 7000 },
 	{ id = 31438, chance = 5500 }, -- sphinx tiara
-	{ name = "magma boots", chance = 3600 },
+	{ name = "magma boots", chance = 4600 },
 	{ name = "lightning pendant", chance = 3500 },
 	{ name = "lightning headband", chance = 3100 },
 	{ name = "wand of starstorm", chance = 2900 },
 	{ name = "wand of defiance", chance = 1800 },
-	{ name = "magma monocle", chance = 1400 },
-	{ name = "magma legs", chance = 1300 },
+	{ name = "magma monocle", chance = 2400 },
+	{ name = "magma legs", chance = 3300 },
 }
 
 monster.attacks = {

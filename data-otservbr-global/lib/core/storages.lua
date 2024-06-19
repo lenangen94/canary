@@ -106,6 +106,7 @@ Storage = {
 	-- unused ExerciseDummyExhaust = 30029,
 	SamsOldBackpack = 30030,
 	SamsOldBackpackDoor = 30031,
+	StrawberryCupcake = 30032,
 	ChayenneReward = 30033,
 	SwampDiggingTimeout = 30034,
 	HydraEggQuest = 30035,
@@ -124,6 +125,8 @@ Storage = {
 	Navigator = 30048,
 	DwarvenLegs = 30049,
 	PrinceDrazzakTime = 30050,
+	LemonCupcake = 30052,
+	BlueberryCupcake = 30053,
 	-- Reserved in Global.Storage.FamiliarSummonEvent10 = 30054
 	-- Reserved in Global.Storage.FamiliarSummonEvent60 = 30055
 	ChayenneKeyTime = 30056,
@@ -1570,8 +1573,6 @@ Storage = {
 			WarriorSkeleton = 52146,
 			DragonCounter = 52147,
 		},
-		QuestLine = 52148,
-		TheLostBrother = 52149,
 	},
 	DreamersChallenge = {
 		-- Reserved storage from 52160 - 52199
@@ -2536,6 +2537,7 @@ Storage = {
 			NightmareTeddy = {},
 			PoacherCavesMiniWorldChange = {},
 			TheGreatDragonHunt = {},
+			TheLostBrother = {},
 			TheTaintedSouls = {},
 		},
 		U10_90 = { -- update 10.90 - Reserved Storages 45201 - 45350
@@ -2933,6 +2935,11 @@ GlobalStorage = {
 		-- Reserved storage from 60010 - 60019
 		CurrentServantWave = 60010,
 		ServantsKilled = 60011,
+	},
+	Podium = {
+		One = 70991,
+		Two = 70992,
+		Three = 70993
 	},
 	Feroxa = {
 		-- Reserved storage from 60020 - 60029

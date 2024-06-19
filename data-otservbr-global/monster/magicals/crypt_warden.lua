@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Crypt Warden")
 local monster = {}
 
 monster.description = "a crypt warden"
-monster.experience = 8400
+monster.experience = 12600
 monster.outfit = {
 	lookType = 1190,
 	lookHead = 41,
@@ -79,14 +79,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 100000, maxCount = 3 },
+	{ name = "platinum coin", chance = 68790, maxCount = 29 },
 	{ name = "cyan crystal fragment", chance = 13670 },
 	{ name = "green crystal fragment", chance = 1770 },
 	{ name = "lamassu horn", chance = 10770 },
 	{ name = "lamassu hoof", chance = 9700 },
-	{ name = "small amethyst", chance = 8680 },
-	{ name = "gold ingot", chance = 4660 },
-	{ name = "green gem", chance = 1290 },
+	{ name = "small amethyst", chance = 8680, maxCount = 2 },
+	{ name = "gold ingot", chance = 4660, maxCount = 3 },
+	{ name = "green gem", chance = 2290 },
 	{ name = "elven amulet", chance = 800 },
 }
 

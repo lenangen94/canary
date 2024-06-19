@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Gaz'Haragoth")
 local monster = {}
 
 monster.description = "Gaz'Haragoth"
-monster.experience = 1000000
+monster.experience = 10000000
 monster.outfit = {
 	lookType = 591,
 	lookHead = 0,
@@ -17,7 +17,7 @@ monster.health = 350000
 monster.maxHealth = 350000
 monster.race = "undead"
 monster.corpse = 20228
-monster.speed = 250
+monster.speed = 150
 monster.manaCost = 0
 
 monster.changeTarget = {
@@ -58,7 +58,7 @@ monster.flags = {
 }
 
 monster.events = {
-	"GazHaragothHeal",
+	"",
 }
 
 monster.light = {
@@ -120,16 +120,16 @@ monster.loot = {
 	{ id = 20077, chance = 500 }, -- umbral mace
 	{ id = 20083, chance = 250 }, -- umbral bow
 	{ id = 20086, chance = 400 }, -- umbral crossbow
-	{ id = 20089, chance = 200 }, -- umbral spellbook
-	{ id = 20066, chance = 300 }, -- umbral masterblade
-	{ id = 20069, chance = 700 }, -- umbral master slayer
-	{ id = 20072, chance = 500 }, -- umbral master axe
-	{ id = 20075, chance = 300 }, -- umbral master chopper
-	{ id = 20081, chance = 250 }, -- umbral master hammer
-	{ id = 20078, chance = 300 }, -- umbral master mace
+	{ id = 20089, chance = 300 }, -- umbral spellbook
+	{ id = 20066, chance = 1300 }, -- umbral masterblade
+	{ id = 20069, chance = 1300 }, -- umbral master slayer
+	{ id = 20072, chance = 1300 }, -- umbral master axe
+	{ id = 20075, chance = 1300 }, -- umbral master chopper
+	{ id = 20081, chance = 1300 }, -- umbral master hammer
+	{ id = 20078, chance = 1300 }, -- umbral master mace
 	{ id = 20084, chance = 1300 }, -- umbral master bow
 	{ id = 20087, chance = 1000 }, -- umbral master crossbow
-	{ id = 20090, chance = 140 }, -- umbral master spellbook
+	{ id = 20090, chance = 1300 }, -- umbral master spellbook
 	{ id = 10345, chance = 6000 }, -- solitude charm
 	{ id = 10344, chance = 6000 }, -- twin sun charm
 	{ id = 10343, chance = 6000 }, -- spiritual charm
@@ -138,13 +138,13 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -5000 },
-	{ name = "combat", interval = 3000, chance = 35, type = COMBAT_ICEDAMAGE, minDamage = -900, maxDamage = -1100, range = 7, radius = 7, shootEffect = CONST_ANI_ICE, effect = CONST_ME_ICEAREA, target = true },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -3000 },
+	{ name = "combat", interval = 3000, chance = 35, type = COMBAT_ICEDAMAGE, minDamage = -900, maxDamage = -1000, range = 7, radius = 7, shootEffect = CONST_ANI_ICE, effect = CONST_ME_ICEAREA, target = true },
 	{ name = "combat", interval = 2000, chance = 13, type = COMBAT_DEATHDAMAGE, minDamage = -100, maxDamage = -1000, length = 8, spread = 3, effect = CONST_ME_POFF, target = false },
 	{ name = "combat", interval = 2000, chance = 19, type = COMBAT_DEATHDAMAGE, minDamage = -100, maxDamage = -800, range = 7, radius = 6, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = true },
 	{ name = "melee", interval = 1800, chance = 40, minDamage = 0, maxDamage = -1000 },
-	{ name = "combat", interval = 3000, chance = 30, type = COMBAT_FIREDAMAGE, minDamage = -4000, maxDamage = -6000, length = 8, spread = 3, effect = CONST_ME_HITBYFIRE, target = false },
-	{ name = "combat", interval = 2000, chance = 14, type = COMBAT_FIREDAMAGE, minDamage = -1600, maxDamage = -3400, length = 8, spread = 3, effect = CONST_ME_FIREAREA, target = false },
+	{ name = "combat", interval = 3000, chance = 30, type = COMBAT_FIREDAMAGE, minDamage = -1000, maxDamage = -1500, length = 8, spread = 3, effect = CONST_ME_HITBYFIRE, target = false },
+	{ name = "combat", interval = 2000, chance = 14, type = COMBAT_FIREDAMAGE, minDamage = -800, maxDamage = -1600, length = 8, spread = 3, effect = CONST_ME_FIREAREA, target = false },
 	{ name = "combat", interval = 2500, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -200, maxDamage = -480, range = 7, radius = 5, effect = CONST_ME_MAGIC_GREEN, target = false },
 	{ name = "gaz'haragoth iceball", interval = 2000, chance = 24, minDamage = -1000, maxDamage = -1000, target = false },
 	{ name = "gaz'haragoth death", interval = 4000, chance = 6, target = false },
@@ -160,16 +160,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{ type = COMBAT_PHYSICALDAMAGE, percent = 50 },
-	{ type = COMBAT_ENERGYDAMAGE, percent = 50 },
-	{ type = COMBAT_EARTHDAMAGE, percent = 50 },
-	{ type = COMBAT_FIREDAMAGE, percent = 50 },
+	{ type = COMBAT_PHYSICALDAMAGE, percent = -50 },
+	{ type = COMBAT_ENERGYDAMAGE, percent = -50 },
+	{ type = COMBAT_EARTHDAMAGE, percent = -50 },
+	{ type = COMBAT_FIREDAMAGE, percent = -50 },
 	{ type = COMBAT_LIFEDRAIN, percent = 0 },
 	{ type = COMBAT_MANADRAIN, percent = 0 },
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
-	{ type = COMBAT_ICEDAMAGE, percent = 50 },
-	{ type = COMBAT_HOLYDAMAGE, percent = 50 },
-	{ type = COMBAT_DEATHDAMAGE, percent = 50 },
+	{ type = COMBAT_ICEDAMAGE, percent = -50 },
+	{ type = COMBAT_HOLYDAMAGE, percent = -50 },
+	{ type = COMBAT_DEATHDAMAGE, percent = -50 },
 }
 
 monster.immunities = {

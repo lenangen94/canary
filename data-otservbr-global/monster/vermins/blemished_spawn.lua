@@ -78,7 +78,6 @@ monster.voices = {
 monster.loot = {
 	{ name = "platinum coin", chance = 70000, maxCount = 25 },
 	{ name = "terra rod", chance = 26530 },
-	{ name = "blemished spawn abdomen", chance = 9690, maxCount = 1 },
 	{ name = "cyan crystal fragment", chance = 8420, maxCount = 3 },
 	{ name = "violet crystal shard", chance = 7380, maxCount = 3 },
 	{ name = "hailstorm rod", chance = 5550 },
@@ -89,7 +88,6 @@ monster.loot = {
 	{ name = "yellow gem", chance = 4560 },
 	{ name = "wand of starstorm", chance = 4190 },
 	{ name = "northwind rod", chance = 5320 },
-	{ name = "blemished spawn head", chance = 4840 },
 	{ name = "sacred tree amulet", chance = 4000 },
 	{ name = "springsprout rod", chance = 4610 },
 	{ name = "diamond sceptre", chance = 3950 },
@@ -97,7 +95,6 @@ monster.loot = {
 	{ name = "ice rapier", chance = 3950 },
 	{ id = 3289, chance = 3760 }, -- staff
 	{ name = "wand of cosmic energy", chance = 3620 },
-	{ name = "blemished spawn tail", chance = 3530 },
 	{ name = "fur armor", chance = 1360 },
 }
 

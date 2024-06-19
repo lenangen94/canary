@@ -92,7 +92,7 @@ monster.loot = {
 	{ id = 3039, chance = 28210 }, -- red gem
 	{ name = "small emerald", chance = 25640, maxCount = 10 },
 	{ name = "small amethyst", chance = 25640, maxCount = 12 },
-	{ name = "silver token", chance = 25640 },
+	{ name = "silver token", chance = 25640, maxCount = 5 },
 	{ name = "small topaz", chance = 20510, maxCount = 10 },
 	{ name = "small ruby", chance = 17950, maxCount = 18 },
 	{ name = "spellbook of warding", chance = 15380 },
@@ -108,7 +108,11 @@ monster.loot = {
 	{ name = "demon helmet", chance = 5130 },
 	{ name = "boots of haste", chance = 2560 },
 	{ id = 24959, chance = 500, unique = true }, -- part of a rune
-	{ name = "pillow backpack", chance = 256 },
+	{ id = 27651, chance = 2020 }, -- gnome 
+	{ id = 27650, chance = 2020 }, -- gnome 
+	{ id = 27649, chance = 2050 }, -- gnome 
+	{ id = 27648, chance = 2700 }, -- gnome 
+	{ id = 27647, chance = 2900 }, -- gnome
 }
 
 monster.attacks = {

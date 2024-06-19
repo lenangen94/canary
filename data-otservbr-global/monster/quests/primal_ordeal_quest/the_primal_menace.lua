@@ -1,56 +1,6 @@
 local mType = Game.createMonsterType("The Primal Menace")
 local monster = {}
 
-local thePrimalMenaceConfig = {
-	Storage = {
-		Initialized = 1,
-		SpawnPos = 2,
-		NextPodSpawn = 3,
-		NextMonsterSpawn = 4,
-		PrimalBeasts = 5, -- List of monsters and when they were created in order to turn them into fungosaurus {monster, created}
-	},
-
-	-- Spawn area
-	SpawnRadius = 5,
-
-	-- Monster spawn time
-	MonsterConfig = {
-		IntervalBase = 30,
-		IntervalReductionPer10PercentHp = 0.98,
-		IntervalReductionPerHazard = 0.985,
-
-		CountBase = 4,
-		CountVarianceRate = 0.5,
-		CountGrowthPerHazard = 1.05,
-		CountMax = 6,
-
-		MonsterPool = {
-			"Emerald Tortoise (Primal)",
-			"Gore Horn (Primal)",
-			"Gorerilla (Primal)",
-			"Headpecker (Primal)",
-			"Hulking Prehemoth (Primal)",
-			"Mantosaurus (Primal)",
-			"Nighthunter (Primal)",
-			"Noxious Ripptor (Primal)",
-			"Sabretooth (Primal)",
-			"Stalking Stalk (Primal)",
-			"Sulphider (Primal)",
-		},
-	},
-
-	PodConfig = {
-		IntervalBase = 30,
-		IntervalReductionPer10PercentHp = 0.98,
-		IntervalReductionPerHazard = 0.985,
-
-		CountBase = 2,
-		CountVarianceRate = 0.5,
-		CountGrowthPerHazard = 1.1,
-		CountMax = 4,
-	},
-}
-
 monster.description = "The Primal Menace"
 monster.experience = 0
 monster.outfit = {
@@ -290,6 +240,8 @@ local function spawnMonster(monsterId, spawnPosition)
 		MonsterId = primalMonster:getId(),
 		Created = os.time(),
 	}
+	local monsterMaxHealth = primalMonster:getMaxHealth()
+	primalMonster:setHealth(monsterMaxHealth * thePrimalMenaceConfig.MonsterConfig.HpRateOnSpawn)
 
 	local primalBeasts = monster:getStorageValue(thePrimalMenaceConfig.Storage.PrimalBeasts)
 	table.insert(primalBeasts, primalBeastEntry)

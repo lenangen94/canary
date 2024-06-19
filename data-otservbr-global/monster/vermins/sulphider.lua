@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Sulphider")
 local monster = {}
 
 monster.description = "a sulphider"
-monster.experience = 13328
+monster.experience = 15460
 monster.outfit = {
 	lookType = 1546,
 	lookHead = 85,
@@ -26,8 +26,8 @@ monster.Bestiary = {
 	Locations = "Monster Graveyard",
 }
 
-monster.health = 21000
-monster.maxHealth = 21000
+monster.health = 18900
+monster.maxHealth = 18900
 monster.race = "blood"
 monster.corpse = 39275
 monster.speed = 215
@@ -87,9 +87,9 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1000 },
-	{ name = "combat", interval = 3500, chance = 40, type = COMBAT_FIREDAMAGE, minDamage = -650, maxDamage = -1060, range = 7, radius = 4, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true },
-	{ name = "blast ring", interval = 4000, chance = 35, minDamage = -600, maxDamage = -1100 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -498 },
+	{ name = "combat", interval = 3500, chance = 40, type = COMBAT_FIREDAMAGE, minDamage = -636, maxDamage = -730, range = 7, radius = 4, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true },
+	{ name = "blast ring", interval = 4000, chance = 35, minDamage = -600, maxDamage = -849 },
 }
 
 monster.defenses = {

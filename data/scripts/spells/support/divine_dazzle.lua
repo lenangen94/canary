@@ -26,7 +26,7 @@ end
 combat:setCallback(CALLBACK_PARAM_CHAINVALUE, "getChainValue")
 
 function onChain(creature, target)
-	local duration = 12000
+	local duration = 20000
 	local player = creature:getPlayer()
 	if creature and player then
 		duration = duration + (player:getWheelSpellAdditionalDuration("Divine Dazzle") * 1000)

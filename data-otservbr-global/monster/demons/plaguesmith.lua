@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Plaguesmith")
 local monster = {}
 
 monster.description = "a plaguesmith"
-monster.experience = 3800
+monster.experience = 4940
 monster.outfit = {
 	lookType = 247,
 	lookHead = 0,
@@ -97,12 +97,12 @@ monster.loot = {
 	{ name = "war hammer", chance = 2127 },
 	{ name = "morning star", chance = 29000 },
 	{ name = "battle hammer", chance = 20000 },
-	{ name = "hammer of wrath", chance = 952 },
+	{ name = "hammer of wrath", chance = 1652 },
 	{ name = "knight legs", chance = 6250 },
 	{ name = "steel shield", chance = 20000 },
-	{ name = "steel boots", chance = 1123 },
+	{ name = "steel boots", chance = 2123 },
 	{ name = "piece of royal steel", chance = 1234 },
-	{ name = "piece of hell steel", chance = 1010 },
+	{ name = "piece of hell steel", chance = 1510 },
 	{ name = "piece of draconian steel", chance = 1030 },
 	{ name = "soul orb", chance = 11111 },
 	{ name = "demonic essence", chance = 9033 },
@@ -115,7 +115,7 @@ monster.attacks = {
 	{ name = "melee", interval = 1500, chance = 100, minDamage = 0, maxDamage = -539, condition = { type = CONDITION_POISON, totalDamage = 200, interval = 4000 } },
 	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -60, maxDamage = -114, radius = 4, effect = CONST_ME_POISONAREA, target = false },
 	{ name = "plaguesmith wave", interval = 2000, chance = 10, minDamage = -100, maxDamage = -350, target = false },
-	{ name = "speed", interval = 2000, chance = 15, speedChange = -800, radius = 4, effect = CONST_ME_POISONAREA, target = false, duration = 30000 },
+	{ name = "speed", interval = 2000, chance = 15, speedChange = -150, radius = 4, effect = CONST_ME_POISONAREA, target = false, duration = 30000 },
 }
 
 monster.defenses = {

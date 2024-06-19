@@ -96,6 +96,7 @@ monster.loot = {
 	{ id = 812, chance = 960 }, -- terra legs
 	{ id = 813, chance = 480 }, -- terra boots
 	{ id = 20200, chance = 4000 }, -- silencer claws
+	{ id = 22721, chance = 620, maxCount = 2},
 	{ name = "fairy wings", chance = 12000 },
 }
 

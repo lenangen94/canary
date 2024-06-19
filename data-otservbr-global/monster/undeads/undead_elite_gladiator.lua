@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Undead Elite Gladiator")
 local monster = {}
 
 monster.description = "an undead elite gladiator"
-monster.experience = 5090
+monster.experience = 12324
 monster.outfit = {
 	lookType = 306,
 	lookHead = 0,
@@ -73,7 +73,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ name = "platinum coin", chance = 44000, maxCount = 40 },
+	{ name = "platinum coin", chance = 55000, maxCount = 70 },
 	{ name = "belted cape", chance = 500 },
 	{ name = "ultimate health potion", chance = 500, maxCount = 2 },
 	{ name = "throwing star", chance = 500, maxCount = 18 },
@@ -81,7 +81,7 @@ monster.loot = {
 	{ id = 3307, chance = 500 }, -- scimitar
 	{ name = "protection amulet", chance = 250 },
 	{ name = "hunting spear", chance = 250 },
-	{ name = "broken gladiator shield", chance = 250 },
+	{ name = "broken gladiator shield", chance = 750 },
 	{ name = "dark helmet", chance = 250 },
 	{ name = "flask of warrior's sweat", chance = 250 },
 	{ name = "plate armor", chance = 250 },
@@ -89,8 +89,8 @@ monster.loot = {
 	{ name = "two handed sword", chance = 250 },
 	{ name = "great health potion", chance = 250, maxCount = 2 },
 	{ id = 3049, chance = 230 }, -- stealth ring
-	{ name = "crusader helmet", chance = 150 },
-	{ name = "relic sword", chance = 150 },
+	{ name = "crusader helmet", chance = 850 },
+	{ name = "relic sword", chance = 850 },
 }
 
 monster.attacks = {
@@ -103,7 +103,7 @@ monster.defenses = {
 	defense = 45,
 	armor = 85,
 	mitigation = 2.40,
-	{ name = "invisible", interval = 2000, chance = 15, effect = CONST_ME_MAGIC_BLUE },
+	{ name = "invisible", interval = 2000, chance = 0, effect = CONST_ME_MAGIC_BLUE },
 }
 
 monster.elements = {

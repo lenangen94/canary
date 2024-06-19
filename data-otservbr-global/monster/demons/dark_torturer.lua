@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Dark Torturer")
 local monster = {}
 
 monster.description = "a dark torturer"
-monster.experience = 4650
+monster.experience = 6975
 monster.outfit = {
 	lookType = 234,
 	lookHead = 0,
@@ -85,9 +85,9 @@ monster.loot = {
 	{ name = "gold coin", chance = 50000, maxCount = 100 },
 	{ name = "gold coin", chance = 40000, maxCount = 99 },
 	{ name = "platinum coin", chance = 55000, maxCount = 8 },
-	{ name = "golden legs", chance = 30 },
+	{ name = "golden legs", chance = 90 },
 	{ id = 3461, chance = 5250 }, -- saw
-	{ name = "steel boots", chance = 5050 },
+	{ name = "steel boots", chance = 4910 },
 	{ name = "ham", chance = 60000, maxCount = 2 },
 	{ name = "orichalcum pearl", chance = 2760, maxCount = 2 },
 	{ name = "cat's paw", chance = 2222 },
@@ -97,8 +97,8 @@ monster.loot = {
 	{ name = "demonic essence", chance = 8520 },
 	{ name = "flask of demonic blood", chance = 33333, maxCount = 3 },
 	{ name = "assassin star", chance = 2222, maxCount = 5 },
-	{ name = "vile axe", chance = 480 },
-	{ name = "butcher's axe", chance = 850 },
+	{ name = "vile axe", chance = 510 },
+	{ name = "butcher's axe", chance = 780 },
 	{ name = "great mana potion", chance = 14830, maxCount = 2 },
 	{ name = "great health potion", chance = 10000, maxCount = 2 },
 	{ name = "gold ingot", chance = 3140 },

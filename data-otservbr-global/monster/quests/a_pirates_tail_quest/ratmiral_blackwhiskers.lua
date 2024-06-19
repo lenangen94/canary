@@ -99,7 +99,7 @@ monster.loot = {
 	{ id = 35523, chance = 890 }, -- exotic amulet
 	{ id = 35515, chance = 890 }, -- throwing axe
 	{ id = 35517, chance = 890 }, -- bast legs
-	{ id = 35516, chance = 890 }, -- exotic legs
+	{ id = 35516, chance = 1390 }, -- exotic legs
 	{ id = 35518, chance = 890 }, -- jungle bow
 	{ id = 35524, chance = 890 }, -- jungle quiver
 	{ id = 35514, chance = 890 }, -- jungle flail

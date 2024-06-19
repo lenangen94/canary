@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Chasm Spawn")
 local monster = {}
 
 monster.description = "a chasm spawn"
-monster.experience = 3600
+monster.experience = 2700
 monster.outfit = {
 	lookType = 1037,
 	lookHead = 0,
@@ -78,9 +78,6 @@ monster.voices = {
 monster.loot = {
 	{ name = "gold coin", chance = 10000, maxCount = 78 },
 	{ name = "wood mushroom", chance = 27200, maxCount = 5 },
-	{ name = "chasm spawn head", chance = 33390 },
-	{ name = "chasm spawn abdomen", chance = 24710 },
-	{ name = "chasm spawn tail", chance = 64890 },
 	{ name = "small enchanted emerald", chance = 11040, maxCount = 3 },
 	{ name = "small enchanted amethyst", chance = 8170, maxCount = 3 },
 	{ name = "brown mushroom", chance = 19680, maxCount = 5 },
@@ -89,7 +86,7 @@ monster.loot = {
 	{ name = "green crystal shard", chance = 7850 },
 	{ name = "violet crystal shard", chance = 4690 },
 	{ name = "mushroom backpack", chance = 610 },
-	{ name = "suspicious device", chance = 850 },
+	{ name = "suspicious device", chance = 520 },
 }
 
 monster.attacks = {
