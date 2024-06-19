@@ -72,7 +72,6 @@ monster.loot = {
 	{ id = 5902, chance = 100000, maxCount = 3 }, -- honeycomb
 	{ id = 3054, chance = 17650 }, -- silver amulet
 	{ id = 3032, chance = 5880 }, -- small emerald
-	{ id = 19083, chance = 5000 }, -- silver raid token
 }
 
 monster.attacks = {

@@ -70,24 +70,24 @@ monster.light = {
 	color = 0,
 }
 
-
 monster.voices = {
 	interval = 5000,
 	chance = 10,
-	{ text = "twiggle*", yell = false },
-	{ text = "SSSSHRRR", yell = false },
+	{ text = "*twiggle*", yell = false },
+	{ text = "SSSSHRRR...", yell = false },
 }
 
 monster.loot = {
-	{ name = "crystal coin", chance = 67550, maxCount = 3 },
-	{ name = "darklight core", chance = 7920 },
-	{ id = 3039, chance = 4910 },
-	{ name = "darklight matter", chance = 3020 },
-	{ name = "rubber cap", chance = 2640 },
-	{ id = 23544, chance = 750 },
-	{ id = 3038, chance = 750 },
-	{ name = "shadow sceptre", chance = 750},
-	{ id = 43895, chance = 3 },
+	{ name = "crystal coin", chance = 11755, maxCount = 1 },
+	{ name = "unstable darklight matter", chance = 9060, maxCount = 1 },
+	{ name = "darklight core", chance = 12887, maxCount = 1 },
+	{ name = "ultimate health potion", chance = 6553, maxCount = 6 },
+	{ id = 3039, chance = 5852, maxCount = 1 }, -- red gem
+	{ name = "darklight matter", chance = 8849, maxCount = 1 },
+	{ name = "rubber cap", chance = 7180, maxCount = 1 },
+	{ id = 23544, chance = 3500, maxCount = 1 }, -- collar of red plasma
+	{ name = "green gem", chance = 3500, maxCount = 1 },
+	{ name = "shadow sceptre", chance = 3500, maxCount = 1 },
 }
 
 monster.attacks = {
@@ -99,9 +99,9 @@ monster.attacks = {
 }
 
 monster.defenses = {
-	defense = 1,
-	armor = 3,
-	mitigation = 0.25,
+	defense = 98,
+	armor = 98,
+	mitigation = 3.28,
 }
 
 monster.elements = {

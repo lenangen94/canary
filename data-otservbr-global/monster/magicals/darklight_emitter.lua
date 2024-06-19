@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Darklight Emitter")
 local monster = {}
 
 monster.description = "a darklight emitter"
-monster.experience = 55000
+monster.experience = 20600
 monster.outfit = {
 	lookType = 1627,
 	lookHead = 0,
@@ -30,7 +30,7 @@ monster.health = 27500
 monster.maxHealth = 27500
 monster.race = "undead"
 monster.corpse = 43583
-monster.speed = 250
+monster.speed = 210
 monster.manaCost = 0
 
 monster.changeTarget = {
@@ -71,21 +71,22 @@ monster.light = {
 }
 
 monster.loot = {
-	{ name = "crystal coin", chance = 64330, maxCount = 3 },
-	{ name = "dark obsidian splinter", chance = 10190 },
-	{ name = "darklight core", chance = 10190 },
-	{ name = "small sapphire", chance = 7010, maxCount = 2 },
-	{ name = "blue gem", chance = 640 },
-	{ name = "twiceslicer", chance = 640 },
-	{ name = "white gem", chance = 640 },
+	{ name = "crystal coin", chance = 12516, maxCount = 2 },
+	{ name = "darklight core", chance = 13367, maxCount = 1 },
+	{ name = "darklight obsidian axe", chance = 10433, maxCount = 1 },
+	{ name = "zaoan armor", chance = 8574, maxCount = 1 },
+	{ name = "basalt crumbs", chance = 5794, maxCount = 1 },
+	{ name = "small topaz", chance = 5784, maxCount = 3 },
+	{ name = "amber staff", chance = 6240, maxCount = 1 },
+	{ id = 3039, chance = 8459, maxCount = 1 }, -- red gem
 	{ id = 43895, chance = 3 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1550 },
-	{ name = "combat", interval = 2600, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -1600, maxDamage = -1750, length = 8, spread = 3, effect = CONST_ME_HITBYFIRE, target = false },
-	{ name = "combat", interval = 3100, chance = 20, type = COMBAT_HOLYDAMAGE, minDamage = -1500, maxDamage = -1600, length = 8, spread = 3, effect = CONST_ME_HOLYAREA, target = false },
-	{ name = "combat", interval = 2600, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -1400, maxDamage = -1650, radius = 5, effect = CONST_ME_HITBYFIRE, target = true },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1050 },
+	{ name = "combat", interval = 2600, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -1400, maxDamage = -1750, length = 8, spread = 3, effect = CONST_ME_HITBYFIRE, target = false },
+	{ name = "combat", interval = 3100, chance = 20, type = COMBAT_HOLYDAMAGE, minDamage = -1000, maxDamage = -1600, length = 8, spread = 3, effect = CONST_ME_HOLYAREA, target = false },
+	{ name = "combat", interval = 2600, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -1200, maxDamage = -1650, radius = 5, effect = CONST_ME_HITBYFIRE, target = true },
 	{ name = "largefirering", interval = 2000, chance = 10, minDamage = -800, maxDamage = -1400, target = false },
 }
 

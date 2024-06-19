@@ -65,7 +65,6 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 19083, chance = 3000 }, -- silver raid token
 	{ id = 3031, chance = 100000, maxCount = 105 }, -- gold coin
 	{ id = 3035, chance = 100000, maxCount = 8 }, -- platinum coin
 	{ id = 19371, chance = 3000 }, -- glass of goo

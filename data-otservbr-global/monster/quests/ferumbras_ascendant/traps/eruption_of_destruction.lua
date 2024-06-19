@@ -59,7 +59,7 @@ monster.voices = {
 monster.loot = {}
 
 monster.attacks = {
-	{ name = "speed", interval = 2000, chance = 25, speedChange = -600, radius = 7, effect = CONST_ME_LOSEENERGY, target = false, duration = 15000 },
+	{ name = "speed", interval = 2000, chance = 25, speedChange = -100, radius = 7, effect = CONST_ME_LOSEENERGY, target = false, duration = 15000 },
 	{ name = "eruption of destruction explosion", interval = 10000, chance = 100, minDamage = -1800, maxDamage = -2200, target = false },
 }
 

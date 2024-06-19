@@ -71,13 +71,14 @@ monster.light = {
 }
 
 monster.loot = {
-	{ name = "crystal coin", chance = 64330 },
-	{ name = "dark obsidian splinter", chance = 10190 },
-	{ name = "darklight core", chance = 10190 },
-	{ name = "small sapphire", chance = 7010, maxCount = 2 },
-	{ name = "blue gem", chance = 640 },
-	{ name = "twiceslicer", chance = 640 },
-	{ name = "white gem", chance = 640 },
+	{ name = "crystal coin", chance = 5214, maxCount = 1 },
+	{ name = "yellow darklight matter", chance = 9397, maxCount = 1 },
+	{ name = "dark obsidian splinter", chance = 13215, maxCount = 1 },
+	{ name = "darklight core", chance = 7570, maxCount = 1 },
+	{ name = "small sapphire", chance = 5644, maxCount = 2 },
+	{ name = "blue gem", chance = 12909, maxCount = 1 },
+	{ name = "twiceslicer", chance = 11596, maxCount = 1 },
+	{ name = "white gem", chance = 13964, maxCount = 1 },
 	{ id = 43895, chance = 3 },
 }
 
@@ -89,9 +90,9 @@ monster.attacks = {
 }
 
 monster.defenses = {
-	defense = 120,
-	armor = 120,
-	mitigation = 2.60,
+	defense = 115,
+	armor = 115,
+	mitigation = 3.19,
 }
 
 monster.elements = {
@@ -104,7 +105,7 @@ monster.elements = {
 	{ type = COMBAT_DROWNDAMAGE, percent = 0 },
 	{ type = COMBAT_ICEDAMAGE, percent = 40 },
 	{ type = COMBAT_HOLYDAMAGE, percent = 0 },
-	{ type = COMBAT_DEATHDAMAGE, percent = 0},
+	{ type = COMBAT_DEATHDAMAGE, percent = 0 },
 }
 
 monster.immunities = {

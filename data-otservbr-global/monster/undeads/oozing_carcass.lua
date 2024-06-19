@@ -1,7 +1,7 @@
 local mType = Game.createMonsterType("Oozing Carcass")
 local monster = {}
 
-monster.description = "a oozing carcass"
+monster.description = "an oozing carcass"
 monster.experience = 20980
 monster.outfit = {
 	lookType = 1626,
@@ -71,22 +71,26 @@ monster.light = {
 }
 
 monster.loot = {
-	{ name = "crystal coin", chance = 64180 },
-	{ name = "small emerald", chance = 7590 },
-	{ id = 3039, chance = 6900 }, -- red gem
-	{ name = "skull staff", chance = 4830 },
-	{ name = "rotten roots", chance = 3450 },
-	{ id = 3037, chance = 4140 }, -- yellow gem
-	{ name = "decayed finger bone", chance = 2760 },
-	{ name = "spellbook of warding", chance = 690 }, 
-	{ id = 43895, chance = 5 },
+	{ name = "crystal coin", chance = 9000, maxCount = 1 },
+	{ name = "lichen gobbler", chance = 12369, maxCount = 1 },
+	{ name = "small emerald", chance = 12859, maxCount = 1 },
+	{ id = 3039, chance = 9808, maxCount = 1 }, -- red gem
+	{ name = "skull staff", chance = 12316, maxCount = 1 },
+	{ name = "bone shield", chance = 6752, maxCount = 1 },
+	{ name = "yellow gem", chance = 8634, maxCount = 1 },
+	{ name = "rotten roots", chance = 13133, maxCount = 1 },
+	{ name = "decayed finger bone", chance = 6964, maxCount = 1 },
+	{ name = "ultimate health potion", chance = 10285, maxCount = 2 },
+	{ name = "bloody edge", chance = 12270, maxCount = 1 },
+	{ name = "spellbook of warding", chance = 5084, maxCount = 1 },
+	{ id = 43895, chance = 3 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1400 },
-	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_DEATHDAMAGE, minDamage = -1500, maxDamage = -1600, radius = 5, effect = CONST_ME_BLACKSMOKE, target = true },
-	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_ICEDAMAGE, minDamage = -1400, maxDamage = -1500, radius = 5, effect = CONST_ME_ICEAREA, target = true },
-	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_ICEDAMAGE, minDamage = -1400, maxDamage = -1550, length = 8, spread = 3, effect = CONST_ME_ICEAREA, target = false },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -600 },
+	{ name = "combat", interval = 2000, chance = 15, type = COMBAT_DEATHDAMAGE, minDamage = -1500, maxDamage = -1600, radius = 5, effect = CONST_ME_BLACKSMOKE, target = false },
+	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_ICEDAMAGE, minDamage = -1400, maxDamage = -1500, radius = 5, effect = CONST_ME_ICEAREA, target = false },
+	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_ICEDAMAGE, minDamage = -1400, maxDamage = -1550, length = 8, spread = 5, effect = CONST_ME_ICEAREA, target = false },
 	{ name = "largedeathring", interval = 2000, chance = 20, minDamage = -850, maxDamage = -1400, target = false },
 	{ name = "energy chain", interval = 3000, chance = 20, minDamage = -1050, maxDamage = -1400, target = false },
 }

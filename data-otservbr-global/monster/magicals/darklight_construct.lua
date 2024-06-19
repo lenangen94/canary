@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Darklight Construct")
 local monster = {}
 
 monster.description = "a darklight construct"
-monster.experience = 44100
+monster.experience = 22050
 monster.outfit = {
 	lookType = 1622,
 	lookHead = 0,
@@ -26,8 +26,8 @@ monster.Bestiary = {
 	Locations = "Darklight Core",
 }
 
-monster.health = 31550
-monster.maxHealth = 31550
+monster.health = 32200
+monster.maxHealth = 32200
 monster.race = "undead"
 monster.corpse = 43840
 monster.speed = 220
@@ -71,18 +71,20 @@ monster.light = {
 }
 
 monster.loot = {
-	{ name = "crystal coin", chance = 53750, maxCount = 3 },
-	{ name = "dark obsidian splinter", chance = 15000 },
-	{ id = 3039, chance = 12500 },
-	{ name = "small emerald", chance = 11250, maxCount = 3 },
-	{ name = "zaoan shoes", chance = 8750 },
-	{ name = "magma amulet", chance = 5000 },
-	{ name = "small ruby", chance = 500 },
+	{ name = "crystal coin", chance = 11290, maxCount = 1 },
+	{ name = "dark obsidian splinter", chance = 12735, maxCount = 1 },
+	{ id = 3039, chance = 8781, maxCount = 1 }, -- red gem
+	{ name = "small emerald", chance = 6646, maxCount = 3 },
+	{ name = "zaoan shoes", chance = 8614, maxCount = 1 },
+	{ name = "darklight core", chance = 5659, maxCount = 1 },
+	{ name = "darklight obsidian axe", chance = 11129, maxCount = 1 },
+	{ name = "magma amulet", chance = 13240, maxCount = 1 },
+	{ name = "small ruby", chance = 12458, maxCount = 3 },
 	{ id = 43895, chance = 3 },
 }
 
 monster.attacks = {
-	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1550 },
+	{ name = "melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -1050 },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_FIREDAMAGE, minDamage = -1300, maxDamage = -1500, length = 8, spread = 3, effect = CONST_ME_HITBYFIRE, target = false },
 	{ name = "combat", interval = 2000, chance = 25, type = COMBAT_FIREDAMAGE, minDamage = -1100, maxDamage = -1400, radius = 5, effect = CONST_ME_HITBYFIRE, target = false },
 	{ name = "combat", interval = 2000, chance = 20, type = COMBAT_HOLYDAMAGE, minDamage = -1500, maxDamage = -1600, radius = 5, effect = CONST_ME_HOLYAREA, target = true },
@@ -93,7 +95,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 117,
 	armor = 117,
-	mitigation = 3.31,
+	mitigation = 2.98,
 }
 
 monster.elements = {

@@ -74,7 +74,6 @@ monster.voices = {
 monster.loot = {
 	{ id = 19363, chance = 200 }, -- runic ice shield
 	{ id = 3031, chance = 70000, maxCount = 100 }, -- gold coin
-	{ id = 19083, chance = 200 }, -- silver raid token
 	{ id = 19362, chance = 200 }, -- icicle bow
 	{ id = 3373, chance = 1200 }, -- strange helmet
 	{ id = 3284, chance = 2200 }, -- ice rapier

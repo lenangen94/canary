@@ -4,9 +4,9 @@ local hazard = Hazard.new({
 	to = Position(33329, 32300, 11),
 	maxLevel = 12,
 
-	crit = true,
+	crit = false,
 	dodge = true,
-	damageBoost = true,
+	damageBoost = false,
 	defenseBoost = true,
 })
 

@@ -76,7 +76,6 @@ monster.voices = {
 }
 
 monster.loot = {
-	{ id = 19083, chance = 200 }, -- silver raid token
 	{ id = 19356, chance = 200 }, -- triple bolt crossbow
 	{ id = 3369, chance = 2000 }, -- warrior helmet
 	{ id = 19357, chance = 500 }, -- shrunken head necklace

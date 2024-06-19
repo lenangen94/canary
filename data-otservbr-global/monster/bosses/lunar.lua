@@ -68,21 +68,27 @@ monster.voices = {
 monster.summons = {}
 
 monster.loot = {
-	{ id = 3043, chance = 60000, maxCount = 250 }, -- crystal coin
+	{ id = 3043, chance = 60000, maxCount = 200 }, -- crystal coin
 	{ id = 22724, chance = 1000000, maxCount = 1 }, -- Titanium Token
-	{ id = 22723, chance = 10000, maxCount = 3 }, -- Platinum Token
+	{ id = 22723, chance = 10000, maxCount = 1 }, -- Platinum Token
+	{ id = 14112, chance = 10000 }, -- Bar of Gold
 	{ id = 37607, chance = 6666 }, -- Green Demon Legs
-	{ name = "music box", chance = 350 },
-	{ name = "vibrant egg", chance = 200 },
-	{ name = "crackling egg", chance = 100 },
-	{ name = "menacing egg", chance = 100 },
-	{ id = 43949, chance =  150 }, -- advanced
 }
 
 monster.attacks = {
-	{ name = "skarn meele", interval = 200, chance = 100, range = 1 },
-	{ name = "skarn infernal strike", interval = 6000, chance = 50 },
-	{ name = "skarn energy ball", interval = 5000, chance = 50 },
+	{ name = "melee", interval = 200, chance = 100, skill = 300, attack = 700 },
+	{ name = "combat", interval = 100, chance = 100, type = COMBAT_PHYSICALDAMAGE, minDamage = -1500, maxDamage = -2500, length = 8, spread = 4, effect = CONST_ME_WHITE_ENERGY_SPARK },
+	{ name = "combat", interval = 150, chance = 100, type = CCOMBAT_FIREDAMAGE, minDamage = -1500, maxDamage = -2500, length = 8, spread = 4, effect = CONST_ME_MAGIC_RED },
+	{ name = "combat", interval = 200, chance = 100, type = COMBAT_PHYSICALDAMAGE, minDamage = -1500, maxDamage = -2500, length = 8, spread = 4, effect = CONST_ME_POFF },
+	{ name = "combat", interval = 250, chance = 100, type = COMBAT_FIREDAMAGE, minDamage = -1500, maxDamage = -2500, length = 8, spread = 4, effect = CONST_ME_FIREAREA },
+	{ name = "combat", interval = 300, chance = 100, type = COMBAT_PHYSICALDAMAGE, minDamage = -1500, maxDamage = -2500, length = 8, spread = 4, effect = CONST_ME_MAGIC_GREEN },
+	{ name = "combat", interval = 350, chance = 100, type = COMBAT_LIFEDRAIN, minDamage = -1800, maxDamage = -2750, length = 8, spread = 4, effect = CONST_ME_MAGIC_RED },
+	{ name = "combat", interval = 400, chance = 30, type = COMBAT_LIFEDRAIN, minDamage = -1800, maxDamage = -3200, radius = 8, effect = CONST_ME_LOSEENERGY, target = false },
+	{ name = "ice chain", interval = 750, chance = 55, minDamage = -1100, maxDamage = -2100, range = 9 },
+	{ name = "combat", interval = 800, chance = 30, type = COMBAT_ICEDAMAGE, minDamage = -2000, maxDamage = -3000, effect = CONST_ME_ICEATTACK },
+	{ name = "combat", interval = 100, chance = 70, type = COMBAT_FIREDAMAGE, minDamage = -1100, maxDamage = -3000, range = 7, radius = 7, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true },
+	{ name = "combat", interval = 300, chance = 60, type = COMBAT_LIFEDRAIN, minDamage = -2100, maxDamage = -3200, length = 8, spread = 4, effect = CONST_ME_MAGIC_RED, target = false },
+	{ name = "tenebris summon", interval = 2000, chance = 50, target = false },
 }
 
 monster.defenses = {

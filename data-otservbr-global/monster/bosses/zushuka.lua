@@ -75,7 +75,6 @@ monster.voices = {
 
 monster.loot = {
 	{ id = 3031, chance = 92000, maxCount = 200 }, -- gold coin
-	{ id = 19083, chance = 92000 }, -- silver raid token
 	{ id = 7290, chance = 57000 }, -- shard
 	{ id = 7449, chance = 42000 }, -- crystal sword
 	{ id = 7642, chance = 42000, maxCount = 5 }, -- great spirit potion
