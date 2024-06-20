@@ -7,9 +7,9 @@ local config = {
 	timeToLeftAfterKill = 60,
 }
 
-local overheatedZone = Zone("fight.magma-bubble.overheated")
+--local overheatedZone = Zone("fight.magma-bubble.overheated")
 local bossZone = Zone("boss.magma-bubble")
-local spawnZone = Zone("fight.magma-bubble.spawn")
+--local spawnZone = Zone("fight.magma-bubble.spawn")
 
 -- top left
 overheatedZone:addArea({ x = 33634, y = 32891, z = 15 }, { x = 33645, y = 32898, z = 15 })
@@ -47,7 +47,7 @@ encounter:addBroadcast("You've entered the volcano."):autoAdvance("1s")
 encounter:addSpawnMonsters({
 	{
 		name = "The End of Days",
-		amount = 3,
+		amount = 0,
 		event = "fight.magma-bubble.TheEndOfDaysHealth",
 	},
 	{
@@ -67,7 +67,7 @@ encounter:addBroadcast("The whole Volcano starts to vibrate! Prepare yourself!")
 encounter:addSpawnMonsters({
 	{
 		name = "The End of Days",
-		amount = 8,
+		amount = 0,
 		event = "fight.magma-bubble.TheEndOfDaysDeath",
 	},
 })
@@ -87,7 +87,7 @@ encounter
 
 for i = 0, 4 do
 	local stage = encounter:addSpawnMonsters({
-		{ name = "Unchained Fire", amount = 5 },
+		{ name = "Unchained Fire", amount = 0 },
 	})
 
 	if i < 4 then
