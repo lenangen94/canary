@@ -26,13 +26,6 @@ end
 spawnEvent:register()
 
 local deathEvent = CreatureEvent(deathEventName)
-local spawnEvent = ZoneEvent(hazardZone)
-function spawnEvent.onSpawn(monster, position)
-	monster:registerEvent(deathEventName)
-end
-spawnEvent:register()
-
-local deathEvent = CreatureEvent(deathEventName)
 function deathEvent.onDeath(creature)
 	local monster = creature:getMonster()
 	if not creature or not monster or not monster:hazard() or not hazard:isInZone(monster:getPosition()) then

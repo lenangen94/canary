@@ -35,9 +35,9 @@ local config = {
 			"greater mystic gem",
 		},
 		chance = {
-			influenced = 0,
+			influenced = 300,
 			fiendish = 9000,
-			archfoe = 3000,
+			archfoe = 5000,
 		},
 		maxCount = 1,
 	},

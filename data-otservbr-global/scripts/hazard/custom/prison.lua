@@ -2,7 +2,7 @@ local hazard = Hazard.new({
 	name = "hazard.prison",
 	from = Position(33500, 32325, 8),
 	to = Position(33630, 32440, 10),
-	maxLevel = 7,
+	maxLevel = 8,
 
 	crit = true,
 	dodge = true,

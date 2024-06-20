@@ -94,7 +94,7 @@ local function spawnPortal(position, monsterName)
 	spawnZone:configureMonster(monsterName, 1)
 	spawnZone:register()
 	table.insert(hazardPortals, { ["position"] = position, ["spawnZone"] = spawnZone })
-	addEvent(removePortal, 2000 * 60 * 60) -- 1h
+	addEvent(removePortal, 2000 * 60 * 60) -- 2h
 end
 
 local function spawnFewEnemies(position, monsterName)

@@ -27,7 +27,6 @@ local hazards = {
 	["rookgard"] = { name = "hazard.rookgard" },
 	["secret library"] = { name = "hazard.secret-library" },
 	["werehyaena"] = { name = "hazard.werehyaena" },
-	["origin"] = { name = "hazard.origin" },
 	["oramond catacombs"] = { name = "hazard.oramond-catacombs" },
 	["soulwars"] = { name = "hazard.soulwars" },
 	["tower"] = { name = "hazard.tower" },

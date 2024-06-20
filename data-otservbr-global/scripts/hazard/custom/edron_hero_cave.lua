@@ -2,7 +2,7 @@ local hazard = Hazard.new({
 	name = "hazard.edron-hero-cave",
 	from = Position(33240, 31520, 9),
 	to = Position(33370, 31626, 10),
-	maxLevel = 7,
+	maxLevel = 12,
 
 	crit = true,
 	dodge = true,

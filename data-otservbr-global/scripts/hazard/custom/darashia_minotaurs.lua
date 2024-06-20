@@ -2,7 +2,7 @@ local hazard = Hazard.new({
 	name = "hazard.darashia-minotaurs",
 	from = Position(33286, 32273, 5),
 	to = Position(33329, 32300, 11),
-	maxLevel = 12,
+	maxLevel = 15,
 
 	crit = false,
 	dodge = true,

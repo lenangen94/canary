@@ -2,7 +2,7 @@ local hazard = Hazard.new({
 	name = "hazard.glooth-bandits",
 	from = Position(33624, 31921, 12),
 	to = Position(33720, 32062, 12),
-	maxLevel = 10,
+	maxLevel = 12,
 
 	crit = true,
 	dodge = true,

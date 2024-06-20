@@ -2,7 +2,7 @@ local hazard = Hazard.new({
 	name = "hazard.ferumbras-ascension-grimeleech",
 	from = Position(33177, 31421, 11),
 	to = Position(33250, 31488, 13),
-	maxLevel = 5,
+	maxLevel = 6,
 
 	crit = true,
 	dodge = true,
