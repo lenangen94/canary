@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Mycobiontic Beetle")
 local monster = {}
 
 monster.description = "a mycobiontic beetle"
-monster.experience = 21175
+monster.experience = 52937
 monster.outfit = {
 	lookType = 1620,
 	lookHead = 0,

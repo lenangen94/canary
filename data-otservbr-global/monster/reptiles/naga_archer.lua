@@ -52,7 +52,7 @@ monster.flags = {
 	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
-	staticAttackChance = 90,
+	staticAttackChance = 50,
 	targetDistance = 3,
 	runHealth = 0,
 	healthHidden = false,
@@ -95,7 +95,7 @@ monster.attacks = {
 	{ name = "combat", interval = 2000, chance = 50, type = COMBAT_PHYSICALDAMAGE, minDamage = -171, maxDamage = -171, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_PURPLEENERGY, range = 6, target = true }, -- basic_attack
 	{ name = "nagadeathattack", interval = 2500, chance = 20, minDamage = -70, maxDamage = -70, range = 6, target = true }, -- death_strike
 	{ name = "nagadeath", interval = 3000, chance = 20, minDamage = -250, maxDamage = -250, target = false }, -- short_death_wave
-	{ name = "death chain", interval = 3500, chance = 20, minDamage = -447, maxDamage = -447, range = 6, target = true }, -- death_chain
+	{ name = "death chain", interval = 3500, chance = 20, minDamage = -200, maxDamage = -350, range = 6, target = true }, -- death_chain
 	{ name = "combat", interval = 4000, chance = 20, type = COMBAT_PHYSICALDAMAGE, minDamage = -85, maxDamage = -190, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_PURPLEENERGY, range = 6, target = true }, -- explosion_strike
 }
 

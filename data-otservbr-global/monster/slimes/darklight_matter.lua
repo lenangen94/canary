@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Darklight Matter")
 local monster = {}
 
 monster.description = "a darklight matter"
-monster.experience = 22250
+monster.experience = 55625
 monster.outfit = {
 	lookType = 1624,
 	lookHead = 0,
