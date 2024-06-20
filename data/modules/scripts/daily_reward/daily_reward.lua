@@ -154,7 +154,6 @@ DailyReward = {
 			freeAccount = 1,
 			premiumAccount = 1,
 		},
-		},
 		[5] = {
 			type = DAILY_REWARD_TYPE_PREY_REROLL,
 			systemType = DAILY_REWARD_SYSTEM_TYPE_TWO,
@@ -219,7 +218,7 @@ DailyReward = {
 			}
 		},]]
 	},
-}
+},
 
 function onRecvbyte(player, msg, byte)
 	if byte == ClientPackets.OpenRewardWall then

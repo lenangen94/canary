@@ -12,16 +12,16 @@ local bossZone = Zone("boss.magma-bubble")
 --local spawnZone = Zone("fight.magma-bubble.spawn")
 
 -- top left
-overheatedZone:addArea({ x = 33634, y = 32891, z = 15 }, { x = 33645, y = 32898, z = 15 })
-overheatedZone:addArea({ x = 33634, y = 32886, z = 15 }, { x = 33648, y = 32892, z = 15 })
+--overheatedZone:addArea({ x = 33634, y = 32891, z = 15 }, { x = 33645, y = 32898, z = 15 })
+--overheatedZone:addArea({ x = 33634, y = 32886, z = 15 }, { x = 33648, y = 32892, z = 15 })
 
 -- top right
-overheatedZone:addArea({ x = 33651, y = 32890, z = 15 }, { x = 33670, y = 32896, z = 15 })
-overheatedZone:addArea({ x = 33664, y = 32896, z = 15 }, { x = 33671, y = 32899, z = 15 })
+--overheatedZone:addArea({ x = 33651, y = 32890, z = 15 }, { x = 33670, y = 32896, z = 15 })
+--overheatedZone:addArea({ x = 33664, y = 32896, z = 15 }, { x = 33671, y = 32899, z = 15 })
 
 -- bottom left
-overheatedZone:addArea({ x = 33635, y = 32911, z = 15 }, { x = 33643, y = 32929, z = 15 })
-overheatedZone:addArea({ x = 33644, y = 32921, z = 15 }, { x = 33647, y = 32928, z = 15 })
+--overheatedZone:addArea({ x = 33635, y = 32911, z = 15 }, { x = 33643, y = 32929, z = 15 })
+--overheatedZone:addArea({ x = 33644, y = 32921, z = 15 }, { x = 33647, y = 32928, z = 15 })
 
 -- central area where monsters/boss spawns
 spawnZone:addArea({ x = 33647, y = 32900, z = 15 }, { x = 33659, y = 32913, z = 15 })
